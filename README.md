@@ -28,7 +28,7 @@ I was curious about the implementation details of such a data structure, since I
 
 2. Incomplete and/or buggy.
 
-3. Not well documented.
+3. Not documented / commented.
 
 4. In functional or procedural language (nothing against it but I like oriented object programming).
 
