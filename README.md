@@ -146,7 +146,9 @@ That's because we're reading the table of pieces (which is a `LinkedList<Piece>`
 
 Since the table of pieces is a `LinkedList`, we have to read it sequentially. When we're trying to access to the middle of the it, reading forward or backward like explained above doesn't help. We have to pay the cost of going through more items to reach the middle.
 
-A potential way to improve it is to keep a cache of node that also give us some information on the state of the text document. Pretty much what's explained here: https://code.visualstudio.com/blogs/2018/03/23/text-buffer-reimplementation#_boost-line-lookup-by-using-a-balanced-binary-tree   
+A potential way to improve it is to transform the piece table into a "piece-tree" that would basically represents the pieces in a hierarchical manner where each node also give us some information on the state of the text document. Pretty much what's explained here: https://code.visualstudio.com/blogs/2018/03/23/text-buffer-reimplementation#_boost-line-lookup-by-using-a-balanced-binary-tree
+
+This approach should allow to perform a binary search.
 
 ### If it's slow to go through a `LinkedList`, why not using a `List`, which would allow binary search?
 
