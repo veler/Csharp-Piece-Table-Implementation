@@ -140,13 +140,13 @@ UnrollFactor=1
 
 ### Inserting or deleting at the beginning and the end of the text document is fast.
 
-That's because we're reading the table of piece (which is a `LinkedList<Piece>`) sequentially to find where does the given span / text should be inserted / deleted. Based on the location in the text document where we want to do the insertion / deletion, the program decides whether is should navigate in the table of piece forward (from the beginning to the end) or backward (from the end to the beginning).
+That's because we're reading the table of pieces (which is a `LinkedList<Piece>`) sequentially to find where does the given span / text should be inserted / deleted. Based on the location in the text document where we want to do the insertion / deletion, the program decides whether it should navigate forward (from the beginning to the end) or backward (from the end to the beginning) in the table of pieces.
 
 ### Inserting or deleting in the middle of the text document is slow.
 
-Since the table of piece is a `LinkedList`, we have to read it sequentially. When we're trying to access to the middle of the it, reading forward or backward like explained above doesn't help. We have to pay the cost of going through every single items.
+Since the table of pieces is a `LinkedList`, we have to read it sequentially. When we're trying to access to the middle of the it, reading forward or backward like explained above doesn't help. We have to pay the cost of going through more items to reach the middle.
 
-Perhaps there would be a way to improve this by making child some list of pieces, in which case we could potentially use some binary search.
+Perhaps there would be a way to improve this by making a hierarchical list of pieces, in which case we could potentially use some binary search.
 
 ### If it's slow to go through a `LinkedList`, why not using a `List`, which would allow binary search?
 
