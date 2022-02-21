@@ -156,7 +156,7 @@ Sure, in C#, reading the list would be faster since we can access to any item th
 
 A good StackOverlow answer about performance difference between LinkedList and List: [c# - When should I use a List vs a LinkedList - Stack Overflow](https://stackoverflow.com/a/29263914)
 
-With all that said, it might worth experimenting with other collection types like  `ImmutableList` for example.
+With all that said, it might worth experimenting with other collection types like  `ImmutableList` for example. But at the end of the day, a true performance improvement, in the context of a text editor, is not to do a piece table, but a "piece tree" using, for example, an AVL Tree or Red-Black Tree.
 
 ## Feedback / Contributing
 
