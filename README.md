@@ -81,7 +81,7 @@ Job=InProcess Toolchain=InProcessEmitToolchain InvocationCount=1
 UnrollFactor=1 
 ```
 
-| Method                                             | Initial character count in the text document | Mean            | Median          | Allocated    |
+| Method                                             | Initial amount of pieces in the piece table  | Mean            | Median          | Allocated    |
 | -------------------------------------------------- | -------------------------------------------- | ---------------:| ---------------:| ------------:|
 | Insertion near the end of the document             | 1000                                         | 2.126 μs        | 1.900 μs        | 960 B        |
 | Insertion near the beginning of the document       | 1000                                         | 1.857 μs        | 1.600 μs        | 480 B        |

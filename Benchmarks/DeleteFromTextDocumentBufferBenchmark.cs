@@ -10,13 +10,13 @@ namespace Benchmarks
         private TextDocumentBuffer _textDocumentBuffer;
 
         [Params(1_000, 10_000, 100_000, 1_000_000)]
-        public int InitialCharacterCount;
+        public int InitialNumberOfPiecesInPieceTable;
 
         [IterationSetup]
         public void IterationSetup()
         {
             _textDocumentBuffer = new TextDocumentBuffer(Array.Empty<char>());
-            for (int i = 0; i < InitialCharacterCount; i++)
+            for (int i = 0; i < InitialNumberOfPiecesInPieceTable; i++)
             {
                 _textDocumentBuffer.Insert(0, "Hello");
             }
